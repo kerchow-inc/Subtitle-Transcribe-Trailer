@@ -18,3 +18,4 @@ Utilizing AWS Transcribe to showcase possible functionalities
 ### Below is a list of functions that are included in the helpers.py file: ###
 * atoi/natural_keys - sort functions found on stack overflow to correctly organize frames
 * turn_trailer_back_to_movie - stitch frames together to original mp4 format and now reattach audio
+* turn_trailer_to_frames - turn trailer mp4 into individual jpg frames
