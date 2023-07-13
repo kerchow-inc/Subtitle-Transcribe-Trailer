@@ -56,3 +56,36 @@ def turn_trailer_back_to_movie(location, name, original):
         final_clip = new_video.set_audio(original_video)
         final_clip.write_videofile(
             f"{name}".replace('.mp4', '_audio.mp4'))
+
+
+
+# turn trailer to frames
+'''
+    trailer(string): location of trailer
+    path_to_save(string): folder location to save frames
+'''
+
+
+def turn_trailer_to_frames(trailer, path_to_save):
+    cap = cv2.VideoCapture(trailer)
+
+    if (cap.isOpened() == False):
+        return {}
+    total_frame = 1
+
+    # cap opened successfully
+    while (cap.isOpened()):
+
+        # capture each frame
+        ret, frame = cap.read()
+        if (ret == True):
+            # Save frame as a jpg file
+            name = 'frame' + str(total_frame) + '.jpg'
+            cv2.imwrite(os.path.join(path_to_save, name), frame)
+
+            total_frame += 1
+
+        else:
+            break
+    # release capture
+    cap.release()
