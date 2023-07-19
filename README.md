@@ -1,5 +1,6 @@
 # Subtitle-Transcribe-Trailer
 Utilizing AWS Transcribe to showcase possible functionalities
+#### YouTube: https://youtu.be/blV2-tLjsbU
 ***
 ### Three functionalities demonstrated in transcriber.py are: ###
 1. Upload object to S3
